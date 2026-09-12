@@ -105,5 +105,7 @@ regulator="example-reg-666";
 ```
 # Contacting/Contributing
 Contributing is welcome (although you will need to create a PR).
+- Implementation details are up to the contributors as long as the architectural goals are preserved.
+- If you are implementing something new - please add documentation so others (and me, hehe) know how to use it!
 - Recomendation: I would want this kernel to first boot on Allwinner A10 (because i have it, its easy to support, it has a datasheet, and does not require SMP to be debugged). So if you decide to add some support - would be very nice to do it for A10! (+I will be able to verify it works)
 - Email:Mobilepaq@disroot.org
