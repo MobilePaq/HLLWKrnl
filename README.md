@@ -1,6 +1,7 @@
 # HLLWKrnl
 MicroKernel/OSKernel Concept.
 - **!! This is currently a design concept, not a working kernel. Contributions are welcome. !!**
+- See docs/todo.md
 # What is it
 *HLLWKrnl - now your toaster on ARM926EJ can be a PC!*
 - It should be RTOS based (e.g FreeRTOS)
