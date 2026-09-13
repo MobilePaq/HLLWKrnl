@@ -10,6 +10,7 @@ MicroKernel/OSKernel Concept.
 - It should not be a x86/PC OS , just embeddables like MIPS/ARM/RISC-V/ETC
 - The drivers will be incompiled (like in linux, no driver module/.ko will be available. This will help avoid linker problems during initial development and save memory)
 - This is planned to be a mini OS (simple permissions/users, protected memory (for apps))
+- - MiniOS in terms of it's standing. It is (kind of) successor to Windows CE/Mobile and Symbian. HLLWKrnl is not planned to be a PC/Desktop nor a Server OS. 
 - Drivers should be easy to write, have adequate documention and stabilized ABI/API in kernel (or it should be updated in a way which DOESNT break old drivers)
 # Implementation details
 ## Driver interaction
