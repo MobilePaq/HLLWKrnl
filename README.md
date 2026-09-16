@@ -60,6 +60,17 @@ This is a compromise, allowing for some versatility(e.g, one kernel can be used 
 ### DTI (DeviceTreeINF) Sample
 No dependency solver, drivers are initialized from up to down in order, so keep that in mind.
 ```
+[runargs]
+rootfs="/stor/mmc0/part0"; //On where rootfs is
+rootfs_fs="FAT32"; //bc why not
+console=uart0;
+console_uart0_free=never; //Means that the uart0 is exclusively taken by the main console and wont be freed for other apps to use
+// NOTE: uart0 speed and controller is not defined in here, read 'Device registration'
+console="/disp/screen1";
+console_"/disp/screen1"_free=onrequest; //Means that if/when any program requests writing to /disp/screen1 the console will be disposed and resource freed for usage
+console="/disp/screen0";
+console_"/disp/screen1"_free=afterinit; //Means that if/when kernel will finish init, /disp/screen0 the console will be disposed and resource freed for usage
+// NOTE 2: Only one console exists at all.
 [spicont0]
 drv="sun4i-spi";
 channel=0;
