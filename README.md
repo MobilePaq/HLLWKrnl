@@ -52,6 +52,7 @@ printf(drv_get_info(handle));
 ```
 Out:
 "sun4i_panel_rgb: rgb_(panelmodel)" (see the DTI Sample)
+- SEE DOCS/FS.md
 ### Device registration
 Boot-critical driver (UART) **does NOT need registration**, other devices do need it. UART is 'inside' the kernel, so its doesn't use the DTI (needed for reliability).
 As you see in DTI Sample below, UART/CPU/Memory/Interrupt DO NOT require registration.
