@@ -1,17 +1,18 @@
 # HLLWKrnl Development Roadmap (or todo)
 
 ### Phase 1: Base boot
-- [ ] Setup QEMU target platform (`versatilepb` or Allwinner A10)
-- [ ] Write startup code (Assembly `boot.s` -> set stack -> jump to C)
-- [ ] Write simple polling UART driver (for `printf` debug output);; see docs/UARTwhat.md
-- [ ] Write somewhat usable makefile (for assembling everything)
-- [ ] Integrate RTOS core (FreeRTOS kernel allocation & task scheduler)
+- [x] Setup QEMU target platform (`versatilepb` or Allwinner A10)
+- [x] Write startup code (Assembly `boot.s` -> set stack -> jump to C)
+- [x] Write simple polling UART driver (for `printf` debug output);; see docs/UARTwhat.md
+- [x] Write somewhat usable makefile (for assembling everything)
 
 ### Phase 2: Driver/config
+- [ ] Make driver model, thus dummy driver, registration, etc;;
 - [ ] Implement DTI Parser;; see README.md#dti-devicetreeinf-sample
 - [ ] Design Driver Registry (`drv_req_access`, `drv_write_fast` logic);; see README.md#driver-interaction
 - [ ] Implement Device Tree instantiation from DTI at boot
 - [ ] Add basic driver set (GPIO, Timers, I2C/SPI bus abstraction)
+- [ ] Integrate RTOS core (FreeRTOS kernel allocation & task scheduler)
 
 ### Phase 3: Memory/Security
 - [ ] Setup ARM MMU page tables (Flat mapping for Kernel, isolated space for App)
